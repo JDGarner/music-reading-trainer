@@ -20,10 +20,10 @@ export default class Stave extends React.Component {
   A5: {
     Cleff: "TREBLE" // TREBLE or BASS
     Line: 3 // 1-5
-    Position: "BELOW" // ON or BELOW
+    Position: "BELOW" // ON or ABOVE
   }
 
-  Staves take a series of notes, e.g. ["A5", "C4", "E5"]
+  Staves take a series of notes, e.g. Notes=["A5", "C4", "E5"] // Notes are objects not strings
   And plot them accordingly, using Line and Positon properites to determine "top" offset
 
 
@@ -43,6 +43,14 @@ export default class Stave extends React.Component {
         key={i}
       />);
     }
+
+    // G5 -> Line number = 0.5 -> Offset = STAVE_LINE_HEIGHT * 0
+    // F5 -> Line number = 1 && -> Offset = STAVE_LINE_HEIGHT * 0.5
+    // E5 -> Line number = 1.5 && -> Offset = STAVE_LINE_HEIGHT * 1
+    // D5 -> Line number = 2 && -> Offset = STAVE_LINE_HEIGHT * 1.5
+
+    // Offset = STAVE_LINE_HEIGHT * (lineNumber - 0.5)
+    // lineNumber = what line it is on, .5 means in between lines
 
     return (
       <View style={styles.musicStave}>
