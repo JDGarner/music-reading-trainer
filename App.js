@@ -10,6 +10,8 @@ export default class App extends React.Component {
   }
 
   render() {
+    const notes = ["A5", "E4"]
+
     return (
       <View style={styles.container}>
         <Stave />

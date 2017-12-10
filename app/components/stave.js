@@ -1,64 +1,66 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import StaveLine from "./stave-line";
+import Note from "./note";
+import { STAVE_LINE_HEIGHT, NUM_OF_STAVE_LINES } from "../appconfig";
 
 export default class Stave extends React.Component {
-  constructor(props) {
-    super(props);
-    this.NUM_OF_STAVE_LINES = 5;
-  }
 
   /*
-  Need some way to say ok, we want an A5 note:
-  An A5 note should be inserted on TREBLE clef ABOVE stave line 2
+  Notes can no longer be the children of the stave line due to
+  overflow visible not working on Android
 
-  Stave lines = 1 to 5, 1 is at bottom, 5 is at top
+  They will have to be children of the stave.
 
-  A stave should be passed props that contain an array of notes to be displayed
-  E.g. ["A5", "C5", "G6"]
-  Each stave line can be the parent of a two notes (the note on it and the note below it)
-  E.g. TREBLE-1 -> ["D5", "E5"] TREBLE-2 -> ["F5", "G5"]
+  Atm I have set number of lines STAVE_LINE_HEIGHT apart.
+  If I want to plot a particular note, I need to know what stave line it should be
+  ON or BELOW
 
-  Each stave line has an array of note props, each note is either ON or BELOW the line
-  This ON or BELOW will determine css position of the note
-  If notes array is empty, dont render any notes on this line
+  Map:
+  A5: {
+    Cleff: "TREBLE" // TREBLE or BASS
+    Line: 3 // 1-5
+    Position: "BELOW" // ON or BELOW
+  }
 
-  TODO: check if 5 is correct for note number treble clef
+  Staves take a series of notes, e.g. ["A5", "C4", "E5"]
+  And plot them accordingly, using Line and Positon properites to determine "top" offset
 
 
-  First step:
-  Make a stave line component that takes two props noteOnLine and noteBelowLine
-
+  VISIBLE TREBLE LINES:
+  F5 -> F5, E5
+  D5 -> D5, C5
+  B5 -> B5, A5
+  G4 -> G4, F4
+  E4 -> E4, D4
   */
 
   render() {
     var staveLines = [];
 
-    for (var i = 0; i < this.NUM_OF_STAVE_LINES; i++) {
+    for (var i = 0; i < NUM_OF_STAVE_LINES; i++) {
       staveLines.push(<StaveLine
         key={i}
-        noteOnLine={true}
-        noteBelowLine={false}
       />);
     }
 
     return (
       <View style={styles.musicStave}>
         {staveLines}
+        <Note />
       </View>
     );
   }
 }
 
+const STAVE_HEIGHT = STAVE_LINE_HEIGHT * (NUM_OF_STAVE_LINES+2);
+
 const styles = StyleSheet.create({
   musicStave: {
-    height: 75,
+    paddingTop: STAVE_LINE_HEIGHT,
+    paddingBottom: STAVE_LINE_HEIGHT,
+    backgroundColor: "rgba(0,0,0,0)",
+    height: STAVE_HEIGHT,
     alignSelf: "stretch"
-  },
-  staveLine: {
-    height: 15,
-    alignSelf: "stretch",
-    borderBottomColor: "#000",
-    borderBottomWidth: 1
   }
 });

@@ -1,5 +1,6 @@
 import React from "react";
 import { StyleSheet, View, Image } from "react-native";
+import { STAVE_LINE_HEIGHT } from "../appconfig";
 
 export default class Note extends React.Component {
   
@@ -17,8 +18,10 @@ export default class Note extends React.Component {
 
 const styles = StyleSheet.create({
   note: {
-    width: 35,
-    height: 21,
-    position: "absolute"
+    width: 20,
+    height: STAVE_LINE_HEIGHT,
+    position: "absolute",
+    top: STAVE_LINE_HEIGHT/2,
+    left: 50
   }
 });
