@@ -10,14 +10,39 @@ import {
 export default class Note extends React.Component {
   constructor(props) {
     super(props);
+    this.styles = this.generateStyles();
+  }
 
-    this.styles = StyleSheet.create({
+  renderLedgerLines() {
+    if (this.props.note.ledgerLine) {
+      const ledgerLineStyle = [this.styles.ledgerLine, this.styles[this.props.note.ledgerLineStyle]]
+      return <View style={ledgerLineStyle} />;
+    } else {
+      return null;
+    }
+  }
+
+  render() {
+    return (
+      <View style={this.styles.note}>
+        {this.renderLedgerLines()}
+        <Image
+          style={this.styles.noteImage}
+          source={require("../assets/semibreve.png")}
+          resizeMode="contain"
+        />
+      </View>
+    );
+  }
+
+  generateStyles() {
+    return StyleSheet.create({
       note: {
         width: SEMIBREVE_IMG_WIDTH * (STAVE_LINE_HEIGHT / SEMIBREVE_IMG_HEIGHT),
         height: STAVE_LINE_HEIGHT,
         position: "absolute",
         top: STAVE_LINE_HEIGHT * (this.props.note.line + NOTE_TOP_OFFSET),
-        left: 50
+        left: this.props.offset + 80
       },
       noteImage: {
         width: "100%",
@@ -41,27 +66,5 @@ export default class Note extends React.Component {
         top: "96%"
       }
     });
-  }
-
-  renderLedgerLines() {
-    if (this.props.note.ledgerLine) {
-      const ledgerLineStyle = [this.styles.ledgerLine, this.styles[this.props.note.ledgerLineStyle]]
-      return <View style={ledgerLineStyle} />;
-    } else {
-      return null;
-    }
-  }
-
-  render() {
-    return (
-      <View style={this.styles.note}>
-        {this.renderLedgerLines()}
-        <Image
-          style={this.styles.noteImage}
-          source={require("../assets/semibreve.png")}
-          resizeMode="contain"
-        />
-      </View>
-    );
   }
 }
