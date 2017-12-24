@@ -1,14 +1,58 @@
+// line = what line it is on, .5 means in between lines
+
+// These are the treble clef notes
 export const notes = {
+  B6: {
+    line: -0.5,
+    ledgerLine: true,
+    ledgerLineStyle: "lowerLedgerLine"
+  },
+  A6: {
+    line: 0,
+    ledgerLine: true,
+    ledgerLineStyle: "middleLedgerLine"
+  },
+  G5: {
+    line: 0.5
+  },
   F5: {
-    Line: 1
+    line: 1
   },
   E5: {
-    Line: 1.5
+    line: 1.5
   },
   D5: {
-    Line: 2
+    line: 2
   },
   C5: {
-    Line: 2.5
+    line: 2.5
+  },
+  B5: {
+    line: 3
+  },
+  A5: {
+    line: 3.5
+  },
+  G4: {
+    line: 4
+  },
+  F4: {
+    line: 4.5
+  },
+  E4: {
+    line: 5
+  },
+  D4: {
+    line: 5.5
+  },
+  C4: {
+    line: 6,
+    ledgerLine: true,
+    ledgerLineStyle: "middleLedgerLine"
+  },
+  B4: {
+    line: 6.5,
+    ledgerLine: true,
+    ledgerLineStyle: "upperLedgerLine"
   }
 };

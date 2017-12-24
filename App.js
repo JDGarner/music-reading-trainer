@@ -1,7 +1,9 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
-import Stave from "./app/components/stave";
+import { StyleSheet, View } from "react-native";
 import Orientation from 'react-native-orientation';
+
+import Stave from "./app/components/stave";
+import { exampleLevel } from "./app/data/level";
 
 export default class App extends React.Component {
 
@@ -10,8 +12,6 @@ export default class App extends React.Component {
   }
 
   render() {
-    const notes = ["A5", "E4"]
-
     return (
       <View style={styles.container}>
         <Stave />
