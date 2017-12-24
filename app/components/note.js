@@ -36,13 +36,15 @@ export default class Note extends React.Component {
   }
 
   generateStyles() {
+    const leftOffset = 18 + this.props.offset;
+
     return StyleSheet.create({
       note: {
         width: SEMIBREVE_IMG_WIDTH * (STAVE_LINE_HEIGHT / SEMIBREVE_IMG_HEIGHT),
         height: STAVE_LINE_HEIGHT,
         position: "absolute",
         top: STAVE_LINE_HEIGHT * (this.props.note.line + NOTE_TOP_OFFSET),
-        left: this.props.offset + 80
+        left: leftOffset + "%"
       },
       noteImage: {
         width: "100%",

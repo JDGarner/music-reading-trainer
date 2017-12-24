@@ -14,7 +14,7 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Stave clefName="treble-clef" notes={exampleLevel} />
+        <Stave isTreble={true} notes={exampleLevel} />
       </View>
     );
   }
@@ -25,6 +25,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#FFF",
     alignItems: "flex-start",
-    justifyContent: "center"
+    justifyContent: "flex-start",
+    paddingTop: 30
   }
 });

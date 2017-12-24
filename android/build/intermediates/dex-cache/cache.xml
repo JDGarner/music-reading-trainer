@@ -12,30 +12,12 @@
     </item>
     <item
         is-multidex="false"
-        jar="/Users/jamie/Documents/Work/Android/MusicReadingTrainer/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.50.3/jars/libs/infer-annotations-4.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="9809e90be788acdb479b2b44e2112f3295a03068">
-        <dex dex="/Users/jamie/Documents/Work/Android/MusicReadingTrainer/android/app/build/intermediates/pre-dexed/debug/infer-annotations-4.0_354bfc552acaae24bb282cb4826fe8c2f8667dcb.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="/Users/jamie/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.0.1/support-annotations-23.0.1.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
         sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
         <dex dex="/Users/jamie/Documents/Work/Android/MusicReadingTrainer/android/app/build/intermediates/pre-dexed/debug/support-annotations-23.0.1_0fb53eff205b3b222bac10ed2097522bbe942a7c.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/jamie/Documents/Work/Android/MusicReadingTrainer/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/libs/internal_impl-23.0.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
-        <dex dex="/Users/jamie/Documents/Work/Android/MusicReadingTrainer/android/app/build/intermediates/pre-dexed/debug/internal_impl-23.0.1_9747783e39c4cb9a26c308dfd53461f9e8a6c493.jar" />
     </item>
     <item
         is-multidex="false"
@@ -48,15 +30,6 @@
     </item>
     <item
         is-multidex="false"
-        jar="/Users/jamie/Documents/Work/Android/MusicReadingTrainer/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.50.3/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="24303e5ddb2c1210dd7e8db9dbab018f50313e48">
-        <dex dex="/Users/jamie/Documents/Work/Android/MusicReadingTrainer/android/app/build/intermediates/pre-dexed/debug/com.facebook.react-react-native-0.50.3_286c730ab0ecd3c75fa8c17b3fdf376f87ef7be7.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="/Users/jamie/.gradle/caches/modules-2/files-2.1/com.facebook.fbui.textlayoutbuilder/staticlayout-proxy/1.0/f162442a19fff13995fbd51ba414d9ee05579080/staticlayout-proxy-1.0.jar"
         jumboMode="false"
         optimize="true"
@@ -66,48 +39,12 @@
     </item>
     <item
         is-multidex="false"
-        jar="/Users/jamie/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
-        <dex dex="/Users/jamie/Documents/Work/Android/MusicReadingTrainer/android/app/build/intermediates/pre-dexed/debug/bolts-tasks-1.4.0_97e61e48d4a4aedc884db5c103af3e92ff66e214.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="/Users/jamie/Documents/Work/Android/MusicReadingTrainer/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fbcore/1.3.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
         sha1="37345de2ed2772f385eaeec37a9c2ff0fea99ad7">
         <dex dex="/Users/jamie/Documents/Work/Android/MusicReadingTrainer/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fbcore-1.3.0_43e0b22b6ec40261805bbddfe55452a317f0010e.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/jamie/Documents/Work/Android/MusicReadingTrainer/android/app/build/intermediates/exploded-aar/com.facebook.fresco/drawee/1.3.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="c65a2e39d54023bac3aef64a2f0cff89289c7ff6">
-        <dex dex="/Users/jamie/Documents/Work/Android/MusicReadingTrainer/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-drawee-1.3.0_56992e1ad3644bd63f7394f58da9db7b0fdf93d6.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/jamie/Documents/Work/Android/MusicReadingTrainer/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
-        <dex dex="/Users/jamie/Documents/Work/Android/MusicReadingTrainer/android/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.0.1_743c85c7780d5d765332a098ac8f9990436911ae.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/jamie/Documents/Work/Android/MusicReadingTrainer/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-okhttp3/1.3.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="c03c08c9934b23c8c09c803345ec51a74119127b">
-        <dex dex="/Users/jamie/Documents/Work/Android/MusicReadingTrainer/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-okhttp3-1.3.0_dfd5fbc2451341254eccc666ac5f7cb5c62684f9.jar" />
     </item>
     <item
         is-multidex="false"
@@ -147,6 +84,78 @@
     </item>
     <item
         is-multidex="false"
+        jar="/Users/jamie/Documents/Work/Android/MusicReadingTrainer/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.51.0/jars/libs/infer-annotations-4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="9809e90be788acdb479b2b44e2112f3295a03068">
+        <dex dex="/Users/jamie/Documents/Work/Android/MusicReadingTrainer/android/app/build/intermediates/pre-dexed/debug/infer-annotations-4.0_8c7fec06cd7edfdc5129e21b1f6a78c905eff479.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jamie/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.6.0/69edde9fc4b01c9fd51d25b83428837478c27254/okhttp-3.6.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="69edde9fc4b01c9fd51d25b83428837478c27254">
+        <dex dex="/Users/jamie/Documents/Work/Android/MusicReadingTrainer/android/app/build/intermediates/pre-dexed/debug/okhttp-3.6.0_36d3b0bed1ff317f6ee163879d602564c4fe5463.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jamie/Documents/Work/Android/MusicReadingTrainer/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/libs/internal_impl-23.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
+        <dex dex="/Users/jamie/Documents/Work/Android/MusicReadingTrainer/android/app/build/intermediates/pre-dexed/debug/internal_impl-23.0.1_9747783e39c4cb9a26c308dfd53461f9e8a6c493.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jamie/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
+        <dex dex="/Users/jamie/Documents/Work/Android/MusicReadingTrainer/android/app/build/intermediates/pre-dexed/debug/bolts-tasks-1.4.0_97e61e48d4a4aedc884db5c103af3e92ff66e214.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jamie/Documents/Work/Android/MusicReadingTrainer/android/app/build/intermediates/exploded-aar/com.facebook.fresco/drawee/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="c65a2e39d54023bac3aef64a2f0cff89289c7ff6">
+        <dex dex="/Users/jamie/Documents/Work/Android/MusicReadingTrainer/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-drawee-1.3.0_56992e1ad3644bd63f7394f58da9db7b0fdf93d6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jamie/Documents/Work/Android/MusicReadingTrainer/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="/Users/jamie/Documents/Work/Android/MusicReadingTrainer/android/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.0.1_743c85c7780d5d765332a098ac8f9990436911ae.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jamie/Documents/Work/Android/MusicReadingTrainer/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-okhttp3/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="c03c08c9934b23c8c09c803345ec51a74119127b">
+        <dex dex="/Users/jamie/Documents/Work/Android/MusicReadingTrainer/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-okhttp3-1.3.0_dfd5fbc2451341254eccc666ac5f7cb5c62684f9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jamie/Documents/Work/Android/MusicReadingTrainer/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.51.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="99941aaaf86dc5e525cd9208c2f7c9a624f4f004">
+        <dex dex="/Users/jamie/Documents/Work/Android/MusicReadingTrainer/android/app/build/intermediates/pre-dexed/debug/com.facebook.react-react-native-0.51.0_81bb6af6a558c32edecfc03aed0ed1c1281d4b71.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/Users/jamie/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.13.0/a9283170b7305c8d92d25aff02a6ab7e45d06cbe/okio-1.13.0.jar"
         jumboMode="false"
         optimize="true"
@@ -171,15 +180,6 @@
         revision="23.0.1"
         sha1="f90b593491e4044903f0bbf68dc3fa2790b151b9">
         <dex dex="/Users/jamie/Documents/Work/Android/MusicReadingTrainer/android/app/build/intermediates/pre-dexed/debug/com.facebook.fbui.textlayoutbuilder-textlayoutbuilder-1.0.0_7e43ff96c2f2784c55645ebee5b13507efc74a15.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/jamie/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.6.0/69edde9fc4b01c9fd51d25b83428837478c27254/okhttp-3.6.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="69edde9fc4b01c9fd51d25b83428837478c27254">
-        <dex dex="/Users/jamie/Documents/Work/Android/MusicReadingTrainer/android/app/build/intermediates/pre-dexed/debug/okhttp-3.6.0_36d3b0bed1ff317f6ee163879d602564c4fe5463.jar" />
     </item>
     <item
         is-multidex="false"

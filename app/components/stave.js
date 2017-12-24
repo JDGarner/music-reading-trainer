@@ -10,7 +10,7 @@ import { STAVE_LINE_HEIGHT, TOTAL_STAVE_LINES } from "../appconfig";
 export default class Stave extends React.Component {
 
   getChord(chord, index) {
-    const offset = 70*index;
+    const offset = 12*index;
 
     return chord.map((note, i) => {
       return <Note key={i} note={note} offset={offset} />;
@@ -25,7 +25,7 @@ export default class Stave extends React.Component {
     return (
       <View style={styles.musicStave}>
         <StaveLines />
-        <ClefImage imageName={this.props.clefName} />
+        <ClefImage isTreble={this.props.isTreble} />
         {chordsToDisplay}
       </View>
     );
