@@ -25,7 +25,7 @@ export default class Stave extends React.Component {
     return (
       <View style={styles.musicStave}>
         <StaveLines />
-        <ClefImage clef={this.props.clef} />
+        <ClefImage imageName={this.props.clefName} />
         {chordsToDisplay}
       </View>
     );

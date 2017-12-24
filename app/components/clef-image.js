@@ -1,22 +1,22 @@
 import React from "react";
 import { StyleSheet, Image } from "react-native";
+import PropTypes from 'prop-types';
 
-export default class ClefImage extends React.Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.styles = this.generateStyles();
-  // }
+const ClefImage = props => {
+  const imagePath = "../assets/" + this.props.imageName + ".png";
+  const imageSource = require(imagePath);
 
-  render() {
-    return (
-      <Image
-        style={styles.clefImage}
-        source={require("../assets/treble-clef.png")}
-        resizeMode="contain"
-      />
-    );
-  }
-}
+  return (
+    <Image style={styles.clefImage} source={imageSource} resizeMode="contain" />
+  );
+};
+
+ClefImage.propTypes = {
+  imageName: PropTypes.string
+};
+
+export default ClefImage;
+
 const styles = StyleSheet.create({
   clefImage: {
     width: 50,
