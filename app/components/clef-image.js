@@ -38,7 +38,7 @@ class ClefImage extends React.Component {
 }
 
 ClefImage.propTypes = {
-  isTreble: PropTypes.bool
+  isTreble: PropTypes.bool.isRequired
 };
 
 export default ClefImage;

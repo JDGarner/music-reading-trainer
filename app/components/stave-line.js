@@ -1,5 +1,7 @@
 import React from "react";
 import { StyleSheet, View } from "react-native";
+import PropTypes from "prop-types";
+
 import { STAVE_LINE_HEIGHT } from "../appconfig";
 
 class StaveLine extends React.Component {
@@ -15,6 +17,10 @@ class StaveLine extends React.Component {
     return <View style={this.lineClasses} />;
   }
 }
+
+StaveLine.propTypes = {
+  visible: PropTypes.bool
+};
 
 export default StaveLine;
 

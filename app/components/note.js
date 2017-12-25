@@ -1,13 +1,16 @@
 import React from "react";
 import { StyleSheet, View, Image, Text } from "react-native";
+import PropTypes from "prop-types";
+
 import {
   STAVE_LINE_HEIGHT,
   SEMIBREVE_IMG_HEIGHT,
   SEMIBREVE_IMG_WIDTH,
-  NOTE_TOP_OFFSET
+  NOTE_TOP_OFFSET,
+  NOTE_LEFT_OFFSET
 } from "../appconfig";
 
-export default class Note extends React.Component {
+class Note extends React.Component {
   constructor(props) {
     super(props);
     this.styles = this.generateStyles();
@@ -15,7 +18,10 @@ export default class Note extends React.Component {
 
   renderLedgerLines() {
     if (this.props.note.ledgerLine) {
-      const ledgerLineStyle = [this.styles.ledgerLine, this.styles[this.props.note.ledgerLineStyle]]
+      const ledgerLineStyle = [
+        this.styles.ledgerLine,
+        this.styles[this.props.note.ledgerLineStyle]
+      ];
       return <View style={ledgerLineStyle} />;
     } else {
       return null;
@@ -36,7 +42,7 @@ export default class Note extends React.Component {
   }
 
   generateStyles() {
-    const leftOffset = 18 + this.props.offset;
+    const leftOffset = NOTE_LEFT_OFFSET + this.props.offset;
 
     return StyleSheet.create({
       note: {
@@ -70,3 +76,10 @@ export default class Note extends React.Component {
     });
   }
 }
+
+Note.propTypes = {
+  note: PropTypes.object.isRequired,
+  offset: PropTypes.number.isRequired
+};
+
+export default Note;

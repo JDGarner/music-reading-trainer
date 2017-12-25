@@ -1,16 +1,16 @@
 import React from "react";
 import { StyleSheet, View } from "react-native";
+import PropTypes from "prop-types";
 
-import { notes } from "../data/notes";
 import StaveLines from "./stave-lines";
 import ClefImage from "./clef-image";
 import Note from "./note";
-import { STAVE_LINE_HEIGHT, TOTAL_STAVE_LINES } from "../appconfig";
+import { STAVE_LINE_HEIGHT, TOTAL_STAVE_LINES, NOTE_SPACING } from "../appconfig";
 
-export default class Stave extends React.Component {
+class Stave extends React.Component {
 
   getChord(chord, index) {
-    const offset = 12*index;
+    const offset = NOTE_SPACING * index;
 
     return chord.map((note, i) => {
       return <Note key={i} note={note} offset={offset} />;
@@ -31,6 +31,13 @@ export default class Stave extends React.Component {
     );
   }
 }
+
+Stave.propTypes = {
+  notes: PropTypes.array.isRequired,
+  isTreble: PropTypes.bool.isRequired
+};
+
+export default Stave;
 
 const STAVE_HEIGHT = STAVE_LINE_HEIGHT * (TOTAL_STAVE_LINES + 1);
 
