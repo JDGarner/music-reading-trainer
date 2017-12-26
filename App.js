@@ -14,7 +14,7 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Stave isTreble={true} notes={exampleLevel} />
+        <Stave isTreble={false} notes={exampleLevel} />
       </View>
     );
   }

@@ -20,18 +20,19 @@ class ClefImage extends React.Component {
   }
 
   generateStyles() {
-    const topOffset = this.props.isTreble ? 0 : 0;
-    const imageWidth = this.props.isTreble ? 30 : 40;
+    const topOffset = this.props.isTreble ? 21 : 35;
+    const imageWidth = this.props.isTreble ? 32 : 45;
+    const imageHeight = this.props.isTreble ? 80 : 40;
 
     return StyleSheet.create({
       clefImage: {
+        flex: 1,
+        alignSelf: 'stretch',
         width: imageWidth,
-        // height: 100,
+        height: imageHeight,
         position: "absolute",
         top: topOffset,
-        left: 5,
-        borderWidth: 1,
-        borderColor: "#00F"
+        left: 5
       }
     });
   }
