@@ -1,9 +1,8 @@
 import React from "react";
-import { StyleSheet, View } from "react-native";
+import { View } from "react-native";
 import Orientation from 'react-native-orientation';
 
-import Stave from "./app/components/stave";
-import { exampleLevel } from "./app/data/level";
+import Game from "./app/containers/game";
 
 export default class App extends React.Component {
 
@@ -13,19 +12,7 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <View style={styles.container}>
-        <Stave isTreble={false} notes={exampleLevel} />
-      </View>
+      <Game />
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#FFF",
-    alignItems: "flex-start",
-    justifyContent: "flex-start",
-    paddingTop: 30
-  }
-});

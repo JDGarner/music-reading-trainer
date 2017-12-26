@@ -43,6 +43,7 @@ const STAVE_HEIGHT = STAVE_LINE_HEIGHT * (TOTAL_STAVE_LINES + 1);
 
 const styles = StyleSheet.create({
   musicStave: {
+    marginTop: 15,
     paddingTop: STAVE_LINE_HEIGHT,
     paddingBottom: STAVE_LINE_HEIGHT,
     backgroundColor: "rgba(0,0,0,0)",
