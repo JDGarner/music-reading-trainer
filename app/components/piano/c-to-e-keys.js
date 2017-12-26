@@ -1,6 +1,6 @@
 import React from "react";
-import { StyleSheet, View } from "react-native";
-import { PIANO_WHITE_KEY_WIDTH } from "../../appconfig";
+import { Dimensions, StyleSheet, View } from "react-native";
+import { TOTAL_WHITE_NOTES_DISPLAYED } from "../../appconfig";
 import WhiteKey from "./white-key";
 
 export default class CtoEKeys extends React.Component {
@@ -13,12 +13,13 @@ export default class CtoEKeys extends React.Component {
   }
 }
 
+const keyWidth = Dimensions.get("window").width / TOTAL_WHITE_NOTES_DISPLAYED;
+
 const styles = StyleSheet.create({
   CtoEKeys: {
-    width: PIANO_WHITE_KEY_WIDTH * 3,
+    width: keyWidth * 3,
     height: "100%",
-    flex: 1,
-    alignSelf: "stretch",
+    flexDirection: "row",
     borderWidth: 1,
     borderColor: "#0FF"
   }
