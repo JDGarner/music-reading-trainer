@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 import StaveLines from "./stave-lines";
 import ClefImage from "./clef-image";
 import Note from "./note";
-import { STAVE_LINE_HEIGHT, TOTAL_STAVE_LINES, NOTE_SPACING } from "../appconfig";
+import { STAVE_LINE_HEIGHT, TOTAL_STAVE_LINES, NOTE_SPACING } from "../../appconfig";
 
 class Stave extends React.Component {
 

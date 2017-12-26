@@ -2,7 +2,7 @@ import React from "react";
 import { StyleSheet, View } from "react-native";
 import PropTypes from "prop-types";
 
-import { STAVE_LINE_HEIGHT } from "../appconfig";
+import { STAVE_LINE_HEIGHT } from "../../appconfig";
 
 class StaveLine extends React.Component {
   constructor(props) {

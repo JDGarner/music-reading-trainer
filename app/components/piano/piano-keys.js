@@ -1,10 +1,14 @@
 import React from "react";
 import { StyleSheet, View } from "react-native";
-import PropTypes from "prop-types";
+import CtoEKeys from "./c-to-e-keys";
 
 class PianoKeys extends React.Component {
   render() {
-    return <View style={styles.pianoKeys} />;
+    return (
+      <View style={styles.pianoKeys}>
+        <CtoEKeys />
+      </View>
+    );
   }
 }
 

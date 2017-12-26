@@ -8,7 +8,7 @@ import {
   SEMIBREVE_IMG_WIDTH,
   NOTE_TOP_OFFSET,
   NOTE_LEFT_OFFSET
-} from "../appconfig";
+} from "../../appconfig";
 
 class Note extends React.Component {
   constructor(props) {
@@ -34,7 +34,7 @@ class Note extends React.Component {
         {this.renderLedgerLines()}
         <Image
           style={this.styles.noteImage}
-          source={require("../assets/semibreve.png")}
+          source={require("../../assets/semibreve.png")}
           resizeMode="contain"
         />
       </View>

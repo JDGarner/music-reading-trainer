@@ -5,8 +5,8 @@ import PropTypes from "prop-types";
 class ClefImage extends React.Component {
   constructor(props) {
     super(props);
-    this.trebleClef = require("../assets/treble-clef.png");
-    this.bassClef = require("../assets/bass-clef.png");
+    this.trebleClef = require("../../assets/treble-clef.png");
+    this.bassClef = require("../../assets/bass-clef.png");
 
     this.styles = this.generateStyles();
   }

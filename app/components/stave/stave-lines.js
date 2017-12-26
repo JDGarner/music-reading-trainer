@@ -6,7 +6,7 @@ import {
   TOTAL_STAVE_LINES,
   VISIBLE_STAVE_LINES,
   INVISIBLE_STAVE_LINES
-} from "../appconfig";
+} from "../../appconfig";
 
 export default class StaveLines extends React.Component {
   render() {
