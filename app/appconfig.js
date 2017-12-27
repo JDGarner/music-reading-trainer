@@ -11,7 +11,4 @@ export const SEMIBREVE_IMG_WIDTH = 60;
 
 export const NOTE_SPACING = 12;
 
-export const PIANO_WHITE_KEY_WIDTH = 32;
-export const PIANO_BLACK_KEY_WIDTH = 24;
-
-export const TOTAL_WHITE_NOTES_DISPLAYED = 13;
+export const TOTAL_WHITE_NOTES_DISPLAYED = 14;

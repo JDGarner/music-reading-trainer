@@ -1,26 +1,23 @@
 import React from "react";
-import { Dimensions, StyleSheet, View } from "react-native";
-import { TOTAL_WHITE_NOTES_DISPLAYED } from "../../appconfig";
+import { StyleSheet, View } from "react-native";
 import WhiteKey from "./white-key";
+import BlackKey from "./black-key";
 
 export default class CtoEKeys extends React.Component {
   render() {
     return <View style={styles.CtoEKeys}>
       <WhiteKey />
+      <BlackKey keyPosition={1} />
       <WhiteKey />
+      <BlackKey keyPosition={2} />
       <WhiteKey />
     </View>;
   }
 }
 
-const keyWidth = Dimensions.get("window").width / TOTAL_WHITE_NOTES_DISPLAYED;
-
 const styles = StyleSheet.create({
   CtoEKeys: {
-    width: keyWidth * 3,
     height: "100%",
-    flexDirection: "row",
-    borderWidth: 1,
-    borderColor: "#0FF"
+    flexDirection: "row"
   }
 });

@@ -1,6 +1,6 @@
 import React from "react";
 import { Dimensions, StyleSheet, View } from "react-native";
-import { TOTAL_WHITE_NOTES_DISPLAYED } from "../../appconfig";
+import { getWhiteKeyWidth } from "../../utils/utils";
 
 export default class WhiteKey extends React.Component {
   render() {
@@ -8,12 +8,12 @@ export default class WhiteKey extends React.Component {
   }
 }
 
-const keyWidth = Dimensions.get("window").width / TOTAL_WHITE_NOTES_DISPLAYED;
+const keyWidth = getWhiteKeyWidth(Dimensions.get("window"));
 
 const styles = StyleSheet.create({
   whiteKey: {
-    width: keyWidth,
     height: "100%",
+    width: keyWidth,
     borderWidth: 1,
     borderColor: "#000"
   }
