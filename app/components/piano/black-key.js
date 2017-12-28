@@ -15,16 +15,17 @@ class BlackKey extends React.Component {
 
   generateStyles() {
     const whiteKeyWidth = getWhiteKeyWidth(Dimensions.get("window"));
-    const blackKeyWidth = whiteKeyWidth * 0.65;
+    const blackKeyWidth = whiteKeyWidth * 0.5;
     const leftOffset = (whiteKeyWidth * this.props.keyPosition) - (blackKeyWidth/2);
 
     return StyleSheet.create({
       blackKey: {
-        height: "65%",
+        height: "55%",
         width: blackKeyWidth,
         position: "absolute",
         left: leftOffset,
-        backgroundColor: "#000"
+        backgroundColor: "#000",
+        zIndex: 1
       }
     });
   }
