@@ -1,25 +1,40 @@
 import React from "react";
-import { TouchableHighlight } from "react-native";
+import { TouchableHighlight, View, StyleSheet } from "react-native";
+import PropTypes from "prop-types";
 
-export default function TouchableKey(KeyComponent) {
-  return class extends React.Component {
-    onPressOut() {
-      this.setState({ keyIsPressed: false });
-    }
+export default class TouchableKey extends React.Component {
+  state = { keyIsPressed: true }
 
-    onPressIn() {
-      this.setState({ keyIsPressed: true });
-    }
+  static propTypes = {
+    render: PropTypes.func.isRequired,
+    style: PropTypes.any
+  }
 
-    render() {
-      return (
-        <TouchableHighlight
-          onPressIn={() => this.onPressIn()}
-          onPressOut={() => this.onPressOut()}
-        >
-          <KeyComponent keyIsPressed={this.state.keyIsPressed} />
-        </TouchableHighlight>
-      );
-    }
-  };
+  onPressOut() {
+    this.setState({ keyIsPressed: false });
+  }
+
+  onPressIn() {
+    this.setState({ keyIsPressed: true });
+  }
+
+  render() {
+    return (
+      <TouchableHighlight
+        onPressIn={() => this.onPressIn()}
+        onPressOut={() => this.onPressOut()}
+        style={this.props.style ? this.props.style : null}
+      >
+        <View style={this.state.keyIsPressed ? styles.pressedKey : null}>
+          {this.props.render()}
+        </View>
+      </TouchableHighlight>
+    );
+  }
 }
+
+const styles = StyleSheet.create({
+  pressedKey: {
+    backgroundColor: "#0072ff"
+  }
+});
