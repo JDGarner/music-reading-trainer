@@ -13,13 +13,18 @@ export default class BlackKey extends React.Component {
 
   static propTypes = {
     keyPosition: PropTypes.number.isRequired // keyPosition denotes after how many white keys the black key is inserted
-  }
+  };
 
   render() {
     return (
       <TouchableKey
         style={this.styles.touchableKey}
-        render={() => <View style={this.styles.blackKey} />}
+        render={state => {
+          const keyStyles = [this.styles.blackKey];
+          if (state.keyIsPressed) keyStyles.push(this.styles.pressedKey);
+
+          return <View style={keyStyles} />;
+        }}
       />
     );
   }
@@ -38,9 +43,12 @@ export default class BlackKey extends React.Component {
         zIndex: 1
       },
       blackKey: {
-        height: "100%",
+        height: "55%",
         width: blackKeyWidth,
         backgroundColor: "#000"
+      },
+      pressedKey: {
+        backgroundColor: "red"
       }
     });
   }

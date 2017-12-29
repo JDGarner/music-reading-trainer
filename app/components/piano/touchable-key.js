@@ -1,14 +1,14 @@
 import React from "react";
-import { TouchableHighlight, View, StyleSheet } from "react-native";
+import { TouchableWithoutFeedback, View, StyleSheet } from "react-native";
 import PropTypes from "prop-types";
 
 export default class TouchableKey extends React.Component {
-  state = { keyIsPressed: true }
+  state = { keyIsPressed: false };
 
   static propTypes = {
     render: PropTypes.func.isRequired,
     style: PropTypes.any
-  }
+  };
 
   onPressOut() {
     this.setState({ keyIsPressed: false });
@@ -20,21 +20,14 @@ export default class TouchableKey extends React.Component {
 
   render() {
     return (
-      <TouchableHighlight
+      <TouchableWithoutFeedback
         onPressIn={() => this.onPressIn()}
         onPressOut={() => this.onPressOut()}
         style={this.props.style ? this.props.style : null}
       >
-        <View style={this.state.keyIsPressed ? styles.pressedKey : null}>
-          {this.props.render()}
-        </View>
-      </TouchableHighlight>
+        {this.props.render(this.state)}
+      </TouchableWithoutFeedback>
     );
   }
 }
 
-const styles = StyleSheet.create({
-  pressedKey: {
-    backgroundColor: "#0072ff"
-  }
-});
