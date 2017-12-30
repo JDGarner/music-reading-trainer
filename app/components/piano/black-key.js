@@ -31,19 +31,19 @@ export default class BlackKey extends React.Component {
 
   generateStyles() {
     const whiteKeyWidth = getWhiteKeyWidth(Dimensions.get("window"));
-    const blackKeyWidth = whiteKeyWidth * 0.5;
+    const blackKeyWidth = whiteKeyWidth * 0.55;
     const leftOffset =
       whiteKeyWidth * this.props.keyPosition - blackKeyWidth / 2;
 
     return StyleSheet.create({
       touchableKey: {
-        height: "55%",
+        height: "60%",
         position: "absolute",
         left: leftOffset,
         zIndex: 1
       },
       blackKey: {
-        height: "55%",
+        height: "100%",
         width: blackKeyWidth,
         backgroundColor: "#000"
       },

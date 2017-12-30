@@ -1,5 +1,5 @@
 import React from "react";
-import { TouchableWithoutFeedback, View, StyleSheet } from "react-native";
+import { TouchableOpacity, View, StyleSheet } from "react-native";
 import PropTypes from "prop-types";
 
 export default class TouchableKey extends React.Component {
@@ -20,13 +20,14 @@ export default class TouchableKey extends React.Component {
 
   render() {
     return (
-      <TouchableWithoutFeedback
+      <TouchableOpacity
         onPressIn={() => this.onPressIn()}
         onPressOut={() => this.onPressOut()}
+        activeOpacity={1}
         style={this.props.style ? this.props.style : null}
       >
         {this.props.render(this.state)}
-      </TouchableWithoutFeedback>
+      </TouchableOpacity>
     );
   }
 }
