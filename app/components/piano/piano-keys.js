@@ -14,7 +14,8 @@ class PianoKeys extends React.Component {
     );
   }
 }
-
+// C4 -> B4
+// C5 -> B5
 export default PianoKeys;
 
 const styles = StyleSheet.create({

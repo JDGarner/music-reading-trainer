@@ -2,12 +2,12 @@
 
 // These are the treble clef notes
 export const notes = {
-  B6: {
+  B5: {
     line: -0.5,
     ledgerLine: true,
     ledgerLineStyle: "lowerLedgerLine"
   },
-  A6: {
+  A5: {
     line: 0,
     ledgerLine: true,
     ledgerLineStyle: "middleLedgerLine"
@@ -27,10 +27,10 @@ export const notes = {
   C5: {
     line: 2.5
   },
-  B5: {
+  B4: {
     line: 3
   },
-  A5: {
+  A4: {
     line: 3.5
   },
   G4: {
@@ -50,9 +50,9 @@ export const notes = {
     ledgerLine: true,
     ledgerLineStyle: "middleLedgerLine"
   },
-  B4: {
-    line: 6.5,
-    ledgerLine: true,
-    ledgerLineStyle: "upperLedgerLine"
-  }
+  // B4: {
+  //   line: 6.5,
+  //   ledgerLine: true,
+  //   ledgerLineStyle: "upperLedgerLine"
+  // }
 };
