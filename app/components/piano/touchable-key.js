@@ -12,10 +12,12 @@ export default class TouchableKey extends React.Component {
 
   onPressOut() {
     this.setState({ keyIsPressed: false });
+    // stop sound ?
   }
 
   onPressIn() {
     this.setState({ keyIsPressed: true });
+    // play sound
   }
 
   render() {
