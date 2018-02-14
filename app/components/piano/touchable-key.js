@@ -2,38 +2,42 @@ import React from "react";
 import { TouchableOpacity, View, StyleSheet } from "react-native";
 import PropTypes from "prop-types";
 import Sound from "react-native-sound";
-import C4MP3 from "../../assets/sound/c4.mp3";
+// import {A4} from "../../data/note-mp3s";
 
 export default class TouchableKey extends React.Component {
   state = { keyIsPressed: false };
 
-  constructor(props) {
-    super(props);
-    Sound.setCategory('Playback');
-    this.C4 = new Sound(C4MP3, (error) => {
-      if (error) {
-        console.log('failed to load the sound', error);
-        return;
-      }
-      console.log('duration in seconds: ' + this.C4.getDuration()  + 'number of channels: ' + this.C4.getNumberOfChannels());
-    });
-  }
-
   static propTypes = {
     render: PropTypes.func.isRequired,
+    noteMP3: PropTypes.any.isRequired,
     style: PropTypes.any
   };
 
+  constructor(props) {
+    super(props);
+    Sound.setCategory("Playback");
+    
+    this.noteMP3 = new Sound(this.props.noteMP3);
+    console.log("kbjknjl");
+    // const note = "A4";
+    // this.noteMP3 = new Sound(`../../assets/sound/${note}.mp3`, (error) => {
+    //   if (error) {
+    //     console.log('failed to load the sound', error);
+    //     return;
+    //   }
+    //   // loaded successfully
+    //   console.log('duration in seconds: ' + whoosh.getDuration() + 'number of channels: ' + whoosh.getNumberOfChannels());
+    // });
+  }
+
   onPressOut() {
     this.setState({ keyIsPressed: false });
-    // stop sound ?
   }
 
   onPressIn() {
     this.setState({ keyIsPressed: true });
-    this.C4.stop();
-    this.C4.play();
-    // play sound
+    this.noteMP3.stop();
+    this.noteMP3.play();
   }
 
   render() {

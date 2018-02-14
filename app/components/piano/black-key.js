@@ -12,13 +12,15 @@ export default class BlackKey extends React.Component {
   }
 
   static propTypes = {
-    keyPosition: PropTypes.number.isRequired // keyPosition denotes after how many white keys the black key is inserted
+    keyPosition: PropTypes.number.isRequired, // keyPosition denotes after how many white keys the black key is inserted
+    noteMP3: PropTypes.any.isRequired
   };
 
   render() {
     return (
       <TouchableKey
         style={this.styles.touchableKey}
+        noteMP3={this.props.noteMP3}
         render={state => {
           const keyStyles = [this.styles.blackKey];
           if (state.keyIsPressed) keyStyles.push(this.styles.pressedKey);

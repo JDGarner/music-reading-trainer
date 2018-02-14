@@ -1,21 +1,20 @@
 import React from "react";
 import { StyleSheet, View } from "react-native";
-import CtoEKeys from "./c-to-e-keys";
-import FtoBKeys from "./f-to-b-keys";
 import OctaveCtoB from "./octave-c-to-b";
+import noteMP3s from "../../data/note-mp3s";
 
 class PianoKeys extends React.Component {
+
   render() {
     return (
       <View style={styles.pianoKeys}>
-        <OctaveCtoB />
-        <OctaveCtoB />
+        <OctaveCtoB noteMP3s={noteMP3s} />
+        <OctaveCtoB noteMP3s={noteMP3s} />
       </View>
     );
   }
 }
-// C4 -> B4
-// C5 -> B5
+
 export default PianoKeys;
 
 const styles = StyleSheet.create({
